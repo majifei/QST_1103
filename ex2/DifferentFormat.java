@@ -16,11 +16,11 @@ import java.util.Scanner;
  */
 public class DifferentFormat {
 	@SuppressWarnings("resource")
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Locale locale = Locale.US; 
-		SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", locale); //修改格式
-		while (scanner.hasNext()){
+		Locale locale = Locale.US;
+		SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss", locale); // 修改格式
+		while (scanner.hasNext()) {
 			String line = scanner.nextLine();
 			Date lineDate = null;
 			long lineTimestamp;
