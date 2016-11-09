@@ -14,14 +14,16 @@ public class ReducerOfIPFilter {
 		String value;
 		Set<String> set = new HashSet<String>();
 		@SuppressWarnings("resource")
-		Scanner scanner = new Scanner(System.in);
+		// Scanner 负责从System.in中读入
+		Scanner sc;
+		sc = new Scanner(System.in);
 		SimpleDateFormat regularFormat = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss");
-		// 输入？
+		// 是这样输入吗？
 		Date beginDate = regularFormat.parse("30/Dec/2015:00:02:09");
 		Date endDate = regularFormat.parse("31/Dec/2015:00:02:09");
 
-		while (scanner.hasNext()) {
-			String line = scanner.nextLine();
+		while (sc.hasNext()) {
+			String line = sc.nextLine();
 			String[] val = line.split("\t");
 			key = val[1];// time
 			value = val[0];// ip
